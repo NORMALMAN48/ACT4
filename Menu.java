@@ -5,9 +5,10 @@ public class Menu { // maneja menu entero
         Scanner sc = new Scanner(System.in);
 
         System.out.println("----------------- Menu -----------------");
-        System.out.println("1. Fibonacci sequence");
+        System.out.println("1. Fibonacci sequence (recursive)");
         System.out.println("2. Subset sum finder");
         System.out.println("3. Sudoku solver (backtracking)");
+        System.out.println("4. Fibonacci Base");
         System.out.println("0. Exit");
 
         int choice = readInt(sc, "Choose: ");
@@ -18,6 +19,8 @@ public class Menu { // maneja menu entero
             runSubsetSum(sc);
         } else if (choice == 3) {
             runSudoku();
+        } else if (choice == 4) {
+            runFibonacciBase(sc);
         } else {
             System.out.println("Closing ...");
         }
@@ -30,6 +33,11 @@ public class Menu { // maneja menu entero
         int n = readInt(sc, "Enter index: ");
         n++;
         Fibonacci.printSequence(n);
+    }
+    private static void runFibonacciBase(Scanner sc) {
+        int n = readInt(sc, "Enter index: ");
+        n++;
+        FibonacciBase.printSequence(n);
     }
 
 
